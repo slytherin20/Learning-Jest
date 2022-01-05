@@ -35,3 +35,21 @@ test('zero',()=>{
     expect(val).toBeTruthy();
     expect(val).toBeFalsy();
 })
+
+test('value comparison',()=>{
+    const val = 4;
+    expect(val).toBeLessThan(5);
+    expect(val).toBeLessThanOrEqual(5);
+    expect(val).toBeGreaterThanOrEqual(5);
+    expect(val).toBeGreaterThan(5);
+
+    //ToBe and toEqual same for numbers
+    expect(val).toBe(4);
+    expect(val).toEqual(4);
+
+})
+
+test('floating point comparison',()=>{
+    const n = 3.45;
+    expect(n).toBeCloseTo(3.451); //Use instead of toBe and toEqual
+})
